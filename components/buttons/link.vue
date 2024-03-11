@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="to" :class="buttonClass">
-    <slot></slot> <!-- Permite a inserção de conteúdo customizado -->
+    <slot></slot>
   </NuxtLink>
 </template>
 
@@ -19,10 +19,10 @@ export default {
   computed: {
     buttonClass() {
       const baseClasses = 'p-[0.5vw] font-bold rounded-md flex flex-row justify-center items-center ';
-      if (this.variant === 'secondary') {
-        return `${baseClasses} bg-secondary text-primary`;
+      if (this.variant === 'red') {
+        return `${baseClasses} bg-white text-red`;
       }
-      return `${baseClasses} text-secondary`;
+      return `${baseClasses} text-white`;
     },
   },
 }
