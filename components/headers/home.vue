@@ -83,7 +83,7 @@
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre a empresa</a>
               </div>
               <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                <a href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sign in</a>
             </div>
             </div>
@@ -114,17 +114,13 @@
     FingerPrintIcon,
     XMarkIcon,
   } from '@heroicons/vue/24/outline'
-  import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+  import { ChevronDownIcon } from '@heroicons/vue/20/solid'
   
   const products = [
     { name: 'Análise', description: 'Tenha um melhor entendimento do seu tráfego', href: '#', icon: ChartPieIcon },
     { name: 'Engajamento', description: 'Comunique-se facilmente com seus clientes', href: '#', icon: CursorArrowRaysIcon },
     { name: 'Segurança', description: 'Seus dados e dos clientes estarão seguros', href: '#', icon: FingerPrintIcon },
     { name: 'Automações', description: 'Crie funis de estratégia para maior conversão', href: '#', icon: ArrowPathIcon },
-  ]
-  const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
   ]
   
   const mobileMenuOpen = ref(false)
