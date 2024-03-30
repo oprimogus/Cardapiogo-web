@@ -32,7 +32,9 @@
   
           <div>
             <button type="submit"
-              class="flex w-full justify-center rounded-md bg-red px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Entrar</button>
+              class="flex w-full justify-center rounded-md bg-red px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Entrar
+            </button>
           </div>
         </form>
   
@@ -49,23 +51,34 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import axios from 'axios';
-import { baseApiUrl } from '../../config/env';
+import { baseApiUrl } from '~/config/env';
 
 const form = ref({
   email: '',
   password: ''
-})
+});
 
 async function handleSubmit() {
   try {
-    const response = await axios.post(`${baseApiUrl}/v1/login`, {
-        email: form.value.email,
-        password: form.value.password
-    })
+    await $fetch('/v1/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    baseURL: baseApiUrl,
+    credentials: 'include',
+    body: {
+      email: form.value.email,
+      password: form.value.password
+    }
+  })
+
+    console.warn('Antes do redirect');
+    // Nuxt 3 recomenda usar navigateTo para navegação.
+    await navigateTo('/home');
+    console.warn('Depois do redirect');
   } catch (error) {
-    console.error('Failed to submit form', error)
-    // Handle error
+    console.error(error);
   }
 }
 </script>
