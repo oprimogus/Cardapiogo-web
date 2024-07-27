@@ -1,28 +1,43 @@
 export function SectionWithImage() {
     return (
         <div>
-            <section className="px-6 py-12 mx-auto flex flex-col items-center justify-center">
+            <section className="px-6 py-12 mx-auto flex flex-col items-center justify-center bg-gray-100">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
-                    <span className="text-red-600">Encontre</span> o lugar perfeito para <span className="text-red-600">todas as suas necessidades</span>
+                    <span className="text-red-600">Delivery Rápido e Fácil</span>
                 </h1>
                 <p className="mt-4 text-lg md:text-xl text-gray-700 text-center md:text-left">
-                    Descubra uma variedade de lojas, desde restaurantes até farmácias, mercados e muito mais.
+                    Peça suas comidas favoritas de restaurantes locais e receba em casa de forma rápida e segura.
+                </p>
+                <img src="./ilustrations/undraw_delivery_address_re_cjca.svg" alt="" className=" w-1/2 h-1/2 m-4" />
+                <p className="mt-2 text-md text-gray-600 text-center md:text-left">
+                    Variedade de opções para todos os gostos e necessidades, entregue diretamente na sua porta.
                 </p>
             </section>
-            <div className="container px-6 py-16 mx-auto">
-                <div className="items-center lg:flex">
-                    <div className="w-full lg:w-1/2">
-                        <div className="lg:max-w-lg">
-                            <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">Best place to choose <br /> your <span className="text-blue-500 ">clothes</span></h1>
-                            <p className="mt-3 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus perspiciatis optio.</p>
-                            <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Shop Now</button>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-                        <img className="w-full h-full lg:max-w-3xl" src="https://merakiui.com/images/components/Catalogue-pana.svg" alt="Catalogue-pana.svg" />
-                    </div>
-                </div>
-            </div>
+            <section className="px-6 py-12 mx-auto flex flex-col items-center justify-center bg-white">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
+                    <span className="text-red-600">Experiências Gastronômicas</span> Perto de Você
+                </h1>
+                <p className="mt-4 text-lg md:text-xl text-gray-700 text-center md:text-left">
+                    Explore e reserve mesas nos melhores restaurantes da sua região para uma experiência gastronômica inesquecível.
+                </p>
+                <img src="./ilustrations/undraw_eating_together_re_ux62.svg" alt="" className=" w-1/2 h-1/2 m-4" />
+                <p className="mt-2 text-md text-gray-600 text-center md:text-left">
+                    Encontre o ambiente perfeito para cada ocasião, desde jantares românticos até encontros com amigos.
+                </p>
+                <img src="./ilustrations/undraw_partying_re_at7f.svg" alt="" className=" w-1/2 h-1/2 m-4" />
+            </section>
+            <section className="px-6 py-12 mx-auto flex flex-col items-center justify-center bg-gray-100">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
+                    <span className="text-red-600">Compras Fáceis e Convenientes</span>
+                </h1>
+                <p className="mt-4 text-lg md:text-xl text-gray-700 text-center md:text-left">
+                    Descubra lojas locais que oferecem uma ampla variedade de produtos e serviços, prontos para você buscar ou receber em casa.
+                </p>
+                <img src="./ilustrations/undraw_shopping_app_flsj.svg" alt="" className=" w-1/2 h-1/2 m-4" />
+                <p className="mt-2 text-md text-gray-600 text-center md:text-left">
+                    Desde farmácias e mercados até serviços especializados, encontre tudo o que precisa em um só lugar.
+                </p>
+            </section>
         </div>
 
 
