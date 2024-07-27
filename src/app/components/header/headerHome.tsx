@@ -14,7 +14,7 @@ export function HeaderHome() {
   ]
 
   return (
-    <header className="bg-red-600 h-12 flex flex-row items-center justify-between text-white">
+    <header className="bg-red-600 h-12 w-full fixed flex flex-row items-center justify-between text-white">
       <nav className="flex flex-row items-center justify-end p-4">
         <a href="/">
         <img src="./cardapiogo/cardapiogo-white.svg" alt="Logo Cardapiogo" className="h-8 w-8" />
