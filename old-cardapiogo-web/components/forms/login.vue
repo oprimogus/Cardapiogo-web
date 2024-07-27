@@ -59,26 +59,6 @@ const form = ref({
 });
 
 async function handleSubmit() {
-  try {
-    await $fetch('/v1/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    baseURL: baseApiUrl,
-    credentials: 'include',
-    body: {
-      email: form.value.email,
-      password: form.value.password
-    }
-  })
-
-    console.warn('Antes do redirect');
-    // Nuxt 3 recomenda usar navigateTo para navegação.
-    await navigateTo('/home');
-    console.warn('Depois do redirect');
-  } catch (error) {
-    console.error(error);
-  }
+  const data2 = await $fetch('/api/v1/auth/sign-in')
 }
 </script>
