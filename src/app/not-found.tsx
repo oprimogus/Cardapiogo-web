@@ -1,5 +1,3 @@
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-
 export default function NotFound() {
     return (
         <section className="bg-red-600 min-h-screen flex items-center justify-center p-4">

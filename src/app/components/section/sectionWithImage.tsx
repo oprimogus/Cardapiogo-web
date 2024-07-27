@@ -1,6 +1,6 @@
 export function SectionWithImage() {
     return (
-        <div>
+        <div className="py-8">
             <section className="px-6 py-12 mx-auto flex flex-col items-center justify-center bg-gray-100">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
                     <span className="text-red-600">Delivery Rápido e Fácil</span>
@@ -39,7 +39,5 @@ export function SectionWithImage() {
                 </p>
             </section>
         </div>
-
-
     );
 }
