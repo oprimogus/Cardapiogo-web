@@ -1,31 +1,36 @@
 'use client'
-import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useState } from "react";
-import { DialogMenu, type DialogMenuItem } from "../menu/dialogMenu";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Menu, MenuItem } from "../menu/menu";
 
 export function HeaderHome() {
-  const [mobileMenu, setMobileMenu] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const items: DialogMenuItem[] = [
-    { href: "/sign-in", text: "Entrar" },
-    { href: "/sign-up", text: "Criar Conta" },
-    { href: "/search", text: "Buscar lojas e restaurantes" },
-    { href: "/sign-up-store", text: "Anuncie sua loja e restaurante" }
-  ]
+    const items: MenuItem[] = [
+        { href: "/search", text: "Buscar lojas e restaurantes" },
+        { href: "/sign-up-store", text: "Anuncie sua empresa" },
+        { href: "/sign-in", text: "Entrar" },
+        { href: "/sign-up", text: "Criar Conta" }
+      ]
 
-  return (
-    <header className="bg-red-600 h-12 w-full fixed flex flex-row items-center justify-between text-white">
-      <nav className="flex flex-row items-center justify-end p-4">
-        <a href="/">
-        <img src="./cardapiogo/cardapiogo-white.svg" alt="Logo Cardapiogo" className="h-8 w-8" />
-        </a>
-      </nav>
-      <nav className="flex flex-row items-center justify-end p-4">
-        <button type="button" onClick={() => setMobileMenu(!mobileMenu)}>
-          <Bars3Icon className="h-8 w-8 transform transition-transform hover:scale-110" />
-        </button>
-      </nav>
-      <DialogMenu isOpen={mobileMenu} items={items}/>
-    </header>
-  );
+    return (
+        <nav className="fixed w-full bg-red-600 shadow">
+            <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center md:px-0">
+                <div className="flex items-center justify-between">
+                    <a href="/">
+                        <img className="w-auto h-12 sm:h-9" src="/cardapiogo/cardapiogo-white.svg" alt="Logo" />
+                    </a>
+                    <div className="flex md:hidden">
+                        <button type="button" aria-label="toggle menu" onClick={() => setIsOpen(!isOpen)}
+                            className="text-white h-8 w-8 transform transition-transform hover:scale-110">
+                            {!isOpen
+                                ? (<Bars3Icon className="h-8 w-8 transform transition-transform hover:scale-110" />)
+                                : (<XMarkIcon className="h-8 w-8 transform transition-transform hover:scale-110" />)}
+                        </button>
+                    </div>
+                </div>
+                <Menu isOpen={isOpen} items={items}/>
+            </div>
+        </nav>
+    );
 }

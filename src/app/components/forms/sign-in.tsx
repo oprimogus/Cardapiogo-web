@@ -2,8 +2,8 @@ export function SignIn() {
     return (
         <section className="bg-white">
             <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-                <form className="w-full max-w-md flex flex-col">
-                    <img className="w-auto h-24 sm:h-8" src="./cardapiogo/cardapiogo-red.svg" alt="" />
+                <form className="w-full max-w-md flex flex-col items-center">
+                    <img className="w-1/4 h-1/4" src="./cardapiogo/cardapiogo-red.svg" alt="" />
                     <h1 className="mt-3 text-2xl font-semibold text-gray-800 text-center sm:text-3xl">Acesse sua conta</h1>
                     <div className="flex items-center mt-8">
                         <input type="email" className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-red-400 focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email" />
