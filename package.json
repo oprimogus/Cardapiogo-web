@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "next-lint": "next lint",
-    "lint": "npx @biomejs/biome lint ./src"
+    "lint": "npx @biomejs/biome check --write ./src"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
