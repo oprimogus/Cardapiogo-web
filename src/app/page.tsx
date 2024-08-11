@@ -2,8 +2,6 @@ import { FooterHome } from "../components/footer/footerHome";
 import { HeaderHome } from "../components/header/headerHome";
 import { SectionWithImage, SectionWithImageItem } from "../components/section/sectionWithImage";
 
-
-
 export default function App() {
 
 	const items: SectionWithImageItem[] = [
