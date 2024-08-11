@@ -1,8 +1,10 @@
-import { FooterHome } from "./components/footer/footerHome";
-import { HeaderHome } from "./components/header/headerHome";
-import { SectionWithImage } from "./components/section/sectionWithImage";
+import { FooterHome } from "../components/footer/footerHome";
+import { HeaderHome } from "../components/header/headerHome";
+import { SectionWithImage } from "../components/section/sectionWithImage";
 
-export default function Home() {
+
+
+export default function App() {
 	return (
 		<main>
 			<HeaderHome />

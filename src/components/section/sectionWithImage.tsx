@@ -1,6 +1,6 @@
 export function SectionWithImage() {
 	return (
-		<div className="py-8">
+		<div className="pt-12">
 			<section className="px-6 py-12 mx-auto flex flex-col items-center justify-center bg-gray-100">
 				<h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
 					<span className="text-red-600">Delivery Rápido e Fácil</span>
