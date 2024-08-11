@@ -28,7 +28,6 @@ export function SignIn() {
 					</h1>
 					<div className="flex items-center mt-8">
 						<input
-							// name="email"
 							type="email"
 							className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-red-400 focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40"
 							placeholder="Email"
@@ -37,7 +36,6 @@ export function SignIn() {
 					</div>
 					<div className="flex items-center mt-4">
 						<input
-							// name="password"
 							type="password"
 							className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-red-400 focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40"
 							placeholder="Senha"
