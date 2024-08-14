@@ -1,2 +1,2 @@
-export * from '../providers/providers';
-export * from './authentication'
+export * from "../providers/providers";
+export * from "./authentication";

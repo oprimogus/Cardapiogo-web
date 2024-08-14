@@ -1,19 +1,19 @@
 "use client";
+import { useAuthContext } from "@/context";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Menu, type MenuItem } from "../menu/menu";
-import Link from "next/link";
-import { useAuthContext } from "@/context";
-import { useRouter } from "next/navigation";
 
 export function HeaderHome() {
-	const [isOpen, setIsOpen] = useState(false)
-	const { isAuthenticated, logout } = useAuthContext()
-	const router = useRouter()
+	const [isOpen, setIsOpen] = useState(false);
+	const { isAuthenticated, logout } = useAuthContext();
+	const router = useRouter();
 
 	function handleLogout() {
-		logout()
-		router.replace('/')
+		logout();
+		router.replace("/");
 	}
 
 	const items: MenuItem[] = [
@@ -55,7 +55,10 @@ export function HeaderHome() {
 						</button>
 					</div>
 				</div>
-				<Menu isOpen={isOpen} items={ isAuthenticated ? itemsWhenLogged : items} />
+				<Menu
+					isOpen={isOpen}
+					items={isAuthenticated ? itemsWhenLogged : items}
+				/>
 			</div>
 		</nav>
 	);

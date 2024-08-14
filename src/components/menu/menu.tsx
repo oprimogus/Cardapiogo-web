@@ -1,17 +1,16 @@
 import Link from "next/link";
 
 export type MenuItem = {
-	href: string
-	text: string
-	action?: () => any
+	href: string;
+	text: string;
+	action?: () => any;
 };
 interface MenuProps {
-	isOpen: boolean
-	items: MenuItem[]
+	isOpen: boolean;
+	items: MenuItem[];
 }
 
 export function Menu({ isOpen, items }: Readonly<MenuProps>) {
-
 	function makeLink(item: MenuItem) {
 		return (
 			<Link
@@ -23,12 +22,13 @@ export function Menu({ isOpen, items }: Readonly<MenuProps>) {
 			>
 				{item.text}
 			</Link>
-		)
+		);
 	}
 
 	function makeButtonAction(item: MenuItem) {
 		return (
 			<button
+				type="button"
 				onClick={item.action}
 				key={item.text}
 				className="w-30 m-2 px-4 rounded-full text-center text-white hover:bg-white hover:text-red-600 
@@ -37,7 +37,7 @@ export function Menu({ isOpen, items }: Readonly<MenuProps>) {
 			>
 				{item.text}
 			</button>
-		)
+		);
 	}
 
 	return (
@@ -50,10 +50,9 @@ export function Menu({ isOpen, items }: Readonly<MenuProps>) {
 			<div className="flex flex-col items-end md:items-center md:flex-row">
 				{items.map((item, index) => {
 					if (item.action) {
-						return makeButtonAction(item)
-					} else {
-						return makeLink(item)
+						return makeButtonAction(item);
 					}
+					return makeLink(item);
 				})}
 			</div>
 		</div>
